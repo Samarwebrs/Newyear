@@ -1,0 +1,3275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy New Year 2026! 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+        }
+
+        /* Level 1: Homepage */
+        .level {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .level.active {
+            display: flex;
+        }
+
+        /* Level 1: Start Screen */
+        #level1 {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        }
+
+        .start-container {
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .start-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700, 0 0 40px #ff6b6b;
+            margin-bottom: 30px;
+        }
+
+        .start-link {
+            display: inline-block;
+            padding: 20px 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(45deg, #ff6b6b, #ffd700, #ff6b6b);
+            background-size: 200% 200%;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            animation: gradient 3s ease infinite, pulse 2s ease-in-out infinite;
+            box-shadow: 0 10px 40px rgba(255, 107, 107, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .start-link:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(255, 107, 107, 0.5); }
+            50% { box-shadow: 0 10px 60px rgba(255, 215, 0, 0.8); }
+        }
+
+        /* Level 2: Fireworks */
+        #level2 {
+            background: linear-gradient(180deg, #000 0%, #0a0a2e 50%, #1a1a3e 100%);
+        }
+
+        .fireworks-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* City Skyline */
+        .city-skyline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 5px;
+            z-index: 5;
+        }
+
+        .building {
+            background: linear-gradient(180deg, #1a1a2e, #0a0a1e);
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+
+        .building::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2a2a4e, #3a3a5e, #2a2a4e);
+        }
+
+        .building .windows {
+            position: absolute;
+            top: 15px;
+            left: 5px;
+            right: 5px;
+            bottom: 10px;
+            background-image: 
+                linear-gradient(90deg, transparent 50%, rgba(255,255,150,0.8) 50%),
+                linear-gradient(180deg, transparent 50%, transparent 50%);
+            background-size: 12px 18px;
+            opacity: 0.9;
+            animation: windowFlicker 3s ease-in-out infinite;
+        }
+
+        @keyframes windowFlicker {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 0.7; }
+        }
+
+        .b1 { width: 60px; height: 180px; }
+        .b2 { width: 45px; height: 120px; }
+        .b3 { width: 70px; height: 220px; border-radius: 5px 5px 0 0; }
+        .b4 { width: 40px; height: 90px; }
+        .b5 { width: 80px; height: 250px; }
+        .b5::after {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 30px;
+            background: linear-gradient(180deg, #ff0000, #ff6666);
+            animation: antennaBlink 1s ease-in-out infinite;
+        }
+        @keyframes antennaBlink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px #ff0000; }
+            50% { opacity: 0.5; box-shadow: 0 0 5px #ff0000; }
+        }
+        .b6 { width: 55px; height: 150px; }
+        .b7 { width: 90px; height: 200px; }
+        .b7::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 40px solid #1a1a2e;
+        }
+        .b8 { width: 50px; height: 130px; }
+        .b9 { width: 65px; height: 170px; }
+        .b10 { width: 40px; height: 100px; }
+        .b11 { width: 75px; height: 190px; }
+        .b12 { width: 55px; height: 140px; }
+
+        .cat-meme {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            z-index: 10;
+        }
+
+        .cat-meme img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: catMouth 0.3s ease-in-out infinite;
+        }
+
+        @keyframes catMouth {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.1); }
+        }
+
+        .firework-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 0 20px #ffd700, 0 0 40px #ff6b6b;
+            z-index: 10;
+            opacity: 0;
+            animation: messageAppear 1s ease-out 2s forwards;
+        }
+
+        @keyframes messageAppear {
+            to { opacity: 1; }
+        }
+
+        .continue-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #ff6b6b, #ffd700);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 20;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 4s forwards;
+            transition: transform 0.3s;
+        }
+
+        .continue-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Level 3: Envelope */
+        #level3 {
+            background: linear-gradient(135deg, #2d1b69, #11998e);
+        }
+
+        .envelope-container {
+            perspective: 1000px;
+        }
+
+        .envelope {
+            width: 400px;
+            height: 280px;
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+
+        .envelope-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(135deg, #c0392b, #a93226);
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            transform-origin: top;
+            transition: transform 0.8s ease-in-out;
+            z-index: 2;
+        }
+
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+
+        .envelope-front {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 0 0 10px 10px;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .envelope-heart {
+            font-size: 4rem;
+            animation: heartbeat 1s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .envelope-text {
+            position: absolute;
+            bottom: -60px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Level 4: Card */
+        #level4 {
+            background: linear-gradient(135deg, #134e5e, #71b280);
+            padding: 20px;
+        }
+
+        .card-container {
+            perspective: 2000px;
+            display: none;
+        }
+
+        .card-container.show {
+            display: block;
+            animation: cardAppear 1s ease-out;
+        }
+
+        @keyframes cardAppear {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            width: 500px;
+            min-height: 650px;
+            height: auto;
+            background: linear-gradient(145deg, #fff9e6, #fff3cc);
+            border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            padding-bottom: 20px;
+        }
+
+        .card-border {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 3px dashed #ffd700;
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        .santa-cat {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .santa-cat img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .card-title {
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #c0392b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-year {
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: 5rem;
+            color: #ffd700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            margin: 10px 0;
+        }
+
+        .bbq-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            perspective: 500px;
+        }
+
+        .bbq-grill {
+            width: 240px;
+            height: 200px;
+            position: relative;
+            animation: grillFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes grillFloat {
+            0%, 100% { transform: translateY(0) rotateY(-5deg); }
+            50% { transform: translateY(-5px) rotateY(5deg); }
+        }
+
+        .grill-lid {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 50px;
+            background: linear-gradient(180deg, #2d2d2d, #1a1a1a, #0d0d0d);
+            border-radius: 90px 90px 0 0;
+            box-shadow: 0 -5px 20px rgba(255, 100, 0, 0.3), inset 0 10px 20px rgba(255,255,255,0.1);
+            z-index: 5;
+        }
+
+        .lid-handle {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 12px;
+            background: linear-gradient(180deg, #c0392b, #8b0000);
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .lid-vent {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 8px;
+            background: #111;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        .grill-body {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 70px;
+            background: linear-gradient(180deg, #1a1a1a, #0d0d0d, #000);
+            border-radius: 0 0 90px 90px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255, 100, 0, 0.2), inset 0 -10px 30px rgba(255, 50, 0, 0.3);
+        }
+
+        .grill-grate {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            z-index: 3;
+        }
+
+        .grate-bar {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #555, #888, #555);
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .grill-stand {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 60px;
+            background: linear-gradient(90deg, #333, #555, #333);
+            border-radius: 4px;
+        }
+
+        .grill-base {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: linear-gradient(180deg, #333, #1a1a1a);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .grill-wheels {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wheel {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle at 30% 30%, #444, #111);
+            border-radius: 50%;
+            border: 3px solid #222;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+        }
+
+        .flames {
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 2;
+            filter: blur(1px);
+        }
+
+        .flame {
+            width: 18px;
+            height: 35px;
+            background: linear-gradient(to top, #ff4500, #ff6b35, #ffd700, #fff8dc, transparent);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 0.4s ease-in-out infinite alternate;
+            opacity: 0.9;
+        }
+
+        .flame:nth-child(1) { animation-delay: 0s; height: 30px; }
+        .flame:nth-child(2) { animation-delay: 0.1s; height: 45px; }
+        .flame:nth-child(3) { animation-delay: 0.05s; height: 38px; }
+        .flame:nth-child(4) { animation-delay: 0.15s; height: 42px; }
+        .flame:nth-child(5) { animation-delay: 0.08s; height: 32px; }
+
+        @keyframes flicker {
+            0% { transform: scaleY(1) scaleX(1) rotate(-3deg); opacity: 0.8; }
+            100% { transform: scaleY(1.3) scaleX(0.9) rotate(3deg); opacity: 1; }
+        }
+
+        .smoke {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .smoke-puff {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(200,200,200,0.6), transparent);
+            border-radius: 50%;
+            animation: smokeRise 2s ease-out infinite;
+        }
+
+        .smoke-puff:nth-child(2) { animation-delay: 0.5s; }
+        .smoke-puff:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes smokeRise {
+            0% { transform: translateY(0) scale(0.5); opacity: 0.8; }
+            100% { transform: translateY(-40px) scale(2); opacity: 0; }
+        }
+
+        .food-items {
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 4;
+        }
+
+        .food {
+            font-size: 1.4rem;
+            animation: sizzle 0.3s ease-in-out infinite alternate;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)) drop-shadow(0 0 10px rgba(255, 100, 0, 0.5));
+        }
+
+        .food:nth-child(1) { animation-delay: 0s; }
+        .food:nth-child(2) { animation-delay: 0.1s; }
+        .food:nth-child(3) { animation-delay: 0.2s; }
+        .food:nth-child(4) { animation-delay: 0.15s; }
+
+        @keyframes sizzle {
+            0% { transform: translateY(0) rotate(-2deg); }
+            100% { transform: translateY(-4px) rotate(2deg); }
+        }
+
+        .sizzle-sparks {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 30px;
+            z-index: 1;
+        }
+
+        .spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: sparkle 1s ease-out infinite;
+        }
+
+        .spark:nth-child(1) { left: 20%; animation-delay: 0s; }
+        .spark:nth-child(2) { left: 40%; animation-delay: 0.3s; }
+        .spark:nth-child(3) { left: 60%; animation-delay: 0.6s; }
+        .spark:nth-child(4) { left: 80%; animation-delay: 0.9s; }
+
+        @keyframes sparkle {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-20px) scale(0); opacity: 0; }
+        }
+
+        .card-wishes {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 20px 0 10px 0;
+            padding: 0 20px;
+        }
+
+        .card-footer {
+            position: relative;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #c0392b;
+            background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+            padding: 15px 20px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .card-footer span {
+            color: #e74c3c;
+            font-size: 1.5rem;
+            animation: heartPulse 1s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        .card-continue {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #c0392b, #e74c3c);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-continue:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(192, 57, 43, 0.4);
+        }
+
+        /* Level 5: Bucket List */
+        #level5 {
+            background: linear-gradient(135deg, #4a1942, #1a1a2e);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .bucket-container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .bucket-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .bucket-list {
+            list-style: none;
+        }
+
+        .bucket-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .bucket-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+
+        .bucket-item.checked {
+            background: linear-gradient(45deg, rgba(46, 204, 113, 0.3), rgba(39, 174, 96, 0.3));
+        }
+
+        .bucket-checkbox {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #ffd700;
+            border-radius: 8px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .bucket-item.checked .bucket-checkbox {
+            background: #ffd700;
+            color: #1a1a2e;
+        }
+
+        .bucket-text {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .bucket-item.checked .bucket-text {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .lets-go-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 18px 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            opacity: 0.5;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .lets-go-btn.active {
+            opacity: 1;
+            pointer-events: auto;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+        }
+
+        .lets-go-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Game Styles */
+        .game-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .game-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .game-subtitle {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .game-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+
+        .game-btn {
+            margin-top: 30px;
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .game-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .game-btn.hidden {
+            display: none;
+        }
+
+        /* Level 6: Memory Game */
+        #level6 {
+            background: linear-gradient(135deg, #1a1a4e, #2d1b69);
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .memory-card {
+            aspect-ratio: 1;
+            background: linear-gradient(145deg, #3a3a6e, #2a2a5e);
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .memory-card:hover {
+            transform: scale(1.05);
+        }
+
+        .memory-card .card-front {
+            position: absolute;
+            backface-visibility: hidden;
+            font-size: 2rem;
+        }
+
+        .memory-card .card-back {
+            font-size: 2rem;
+        }
+
+        .memory-card.flipped {
+            background: linear-gradient(145deg, #ffd700, #ffaa00);
+            transform: rotateY(180deg);
+        }
+
+        .memory-card.matched {
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            animation: matchPulse 0.5s ease-out;
+        }
+
+        @keyframes matchPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Level 7: Balloon Game */
+        #level7 {
+            background: linear-gradient(180deg, #87CEEB, #E0F6FF);
+        }
+
+        .balloon-game {
+            height: 100%;
+            position: relative;
+        }
+
+        .balloon-game .game-title {
+            color: #e74c3c;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .balloon-game .game-subtitle {
+            color: #333;
+        }
+
+        .balloon-game .game-stats {
+            color: #e74c3c;
+        }
+
+        .balloon-area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 70px;
+            height: 90px;
+            border-radius: 50% 50% 50% 50%;
+            cursor: pointer;
+            pointer-events: auto;
+            animation: floatUp 6s linear forwards;
+            transition: transform 0.1s;
+            box-shadow: inset -10px -10px 20px rgba(0,0,0,0.2), inset 10px 10px 20px rgba(255,255,255,0.3);
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid inherit;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: linear-gradient(180deg, #999, #666);
+        }
+
+        .balloon:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes floatUp {
+            0% { bottom: -150px; }
+            100% { bottom: 120%; }
+        }
+
+        .balloon.popped {
+            animation: pop 0.3s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        /* Level 8: Quiz Game */
+        #level8 {
+            background: linear-gradient(135deg, #1a1a3e, #2d3a69);
+        }
+
+        .quiz-container {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .quiz-question {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            padding: 18px 25px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255,215,0,0.2);
+            border-color: #ffd700;
+            transform: translateX(10px);
+        }
+
+        .quiz-option.correct {
+            background: rgba(46, 204, 113, 0.5);
+            border-color: #2ecc71;
+        }
+
+        .quiz-option.wrong {
+            background: rgba(231, 76, 60, 0.5);
+            border-color: #e74c3c;
+        }
+
+        .quiz-progress {
+            margin-top: 25px;
+            color: #ffd700;
+            font-size: 1rem;
+        }
+
+        .quiz-result {
+            text-align: center;
+            color: #fff;
+        }
+
+        .quiz-result h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .quiz-result p {
+            font-size: 1.3rem;
+        }
+
+        .quiz-result.hidden, .hidden {
+            display: none;
+        }
+
+        /* Level 9: Cassette */
+        #level9 {
+            background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+        }
+
+        .cassette-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cassette-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .cassette {
+            width: 380px;
+            height: 240px;
+            background: linear-gradient(180deg, #3a3a3a, #2a2a2a, #1a1a1a);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 3px solid #444;
+        }
+
+        .cassette:hover {
+            transform: scale(1.05);
+        }
+
+        .cassette-label {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 90px;
+            background: linear-gradient(180deg, #f5f5dc, #e8e8d0);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .cassette-label-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.3rem;
+            color: #c0392b;
+            margin-bottom: 5px;
+        }
+
+        .cassette-label-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .cassette-window {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 55px;
+            background: linear-gradient(180deg, #111, #000);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 10px;
+            box-shadow: inset 0 3px 10px rgba(0,0,0,0.8);
+        }
+
+        .cassette-reel {
+            width: 42px;
+            height: 42px;
+            background: radial-gradient(circle, #fff 0%, #eee 50%, #ddd 100%);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .cassette-reel::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+            background: #1a1a1a;
+            border-radius: 50%;
+        }
+
+        .cassette-reel::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            border: 2px dashed rgba(0,0,0,0.2);
+            border-radius: 50%;
+        }
+
+        .cassette-reel.spinning {
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .cassette-tape {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #5c3d2e, #8b4513, #5c3d2e);
+            border-radius: 2px;
+        }
+
+        .cassette-holes {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 80px;
+        }
+
+        .cassette-hole {
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        .cassette-screws {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .screw {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #666, #333);
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .screw::after {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8px;
+            color: #222;
+        }
+
+        .screw.tl { top: 8px; left: 8px; }
+        .screw.tr { top: 8px; right: 8px; }
+        .screw.bl { bottom: 8px; left: 8px; }
+        .screw.br { bottom: 8px; right: 8px; }
+
+        .play-status {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 15px 0;
+        }
+
+        .cassette-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(180deg, #444, #222);
+            border: 2px solid #555;
+            border-radius: 50%;
+            color: #ffd700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .control-btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(180deg, #555, #333);
+        }
+
+        .control-btn:active {
+            transform: scale(0.95);
+        }
+
+        .cassette-continue {
+            margin-top: 20px;
+            padding: 15px 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cassette-continue:hover {
+            transform: scale(1.1);
+        }
+
+        /* Level 10: Personal Message */
+        #level10 {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .message-container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .message-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 30px;
+        }
+
+        .target-name {
+            font-family: 'Pacifico', cursive;
+            font-size: 4rem;
+            color: #ff6b6b;
+            text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+            margin-bottom: 30px;
+            animation: nameGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes nameGlow {
+            0%, 100% { text-shadow: 0 0 30px rgba(255, 107, 107, 0.5); }
+            50% { text-shadow: 0 0 50px rgba(255, 107, 107, 0.8), 0 0 80px rgba(255, 215, 0, 0.5); }
+        }
+
+        .message-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .message-text {
+            font-size: 1.3rem;
+            color: #fff;
+            line-height: 2;
+        }
+
+        .final-wishes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .wish-tag {
+            padding: 10px 25px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd700);
+            border-radius: 20px;
+            color: #1a1a2e;
+            font-weight: 600;
+            animation: tagFloat 3s ease-in-out infinite;
+        }
+
+        .wish-tag:nth-child(2) { animation-delay: 0.5s; }
+        .wish-tag:nth-child(3) { animation-delay: 1s; }
+        .wish-tag:nth-child(4) { animation-delay: 1.5s; }
+
+        @keyframes tagFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .restart-btn {
+            margin-top: 40px;
+            padding: 15px 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .restart-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Creator Page */
+        #creator {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .creator-container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px;
+        }
+
+        .creator-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .creator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            background: rgba(255,255,255,0.9);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .generate-btn {
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 20px;
+        }
+
+        .generate-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .generated-link {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            display: none;
+        }
+
+        .generated-link.show {
+            display: block;
+        }
+
+        .generated-link p {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .generated-link input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .copy-btn {
+            margin-top: 10px;
+            padding: 10px 30px;
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #e74c3c;
+        }
+
+        /* QR Code Styles */
+        .qr-section {
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(145deg, rgba(255,215,0,0.1), rgba(255,107,107,0.1));
+            border-radius: 20px;
+            border: 2px dashed rgba(255,215,0,0.5);
+        }
+
+        .qr-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .qr-frame {
+            background: linear-gradient(145deg, #fff, #f0f0f0);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), inset 0 0 0 5px #ffd700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qr-frame::before {
+            content: '🎉';
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            font-size: 1.2rem;
+        }
+
+        .qr-frame::after {
+            content: '🎊';
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .qr-decorations {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+        }
+
+        #qrCode {
+            display: block;
+        }
+
+        #qrCode canvas {
+            border-radius: 10px;
+        }
+
+        .qr-label {
+            background: linear-gradient(45deg, #ffd700, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .download-qr-btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #ff6b6b, #ffd700, #ff6b6b);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .download-qr-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.6);
+        }
+
+        .qr-note {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        /* Stars background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .progress-dot.active {
+            background: #ffd700;
+            box-shadow: 0 0 10px #ffd700;
+        }
+
+        .progress-dot.completed {
+            background: #2ecc71;
+        }
+
+        /* Audio element hidden */
+        audio {
+            display: none;
+        }
+
+        /* ==================== MOBILE RESPONSIVE STYLES ==================== */
+        @media screen and (max-width: 768px) {
+            /* General */
+            body {
+                overflow-x: hidden;
+            }
+
+            .level {
+                padding: 15px;
+            }
+
+            /* Progress Bar */
+            .progress-bar {
+                gap: 6px;
+                top: 10px;
+            }
+
+            .progress-dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            /* Level 1: Start */
+            .start-title {
+                font-size: 2.2rem;
+                padding: 0 20px;
+            }
+
+            .start-link {
+                padding: 15px 40px;
+                font-size: 1.1rem;
+            }
+
+            /* Level 2: Fireworks */
+            .city-skyline {
+                height: 150px;
+                gap: 3px;
+            }
+
+            .building {
+                transform: scale(0.7);
+                transform-origin: bottom;
+            }
+
+            .cat-meme {
+                width: 120px;
+                height: 120px;
+                bottom: 30px;
+            }
+
+            .firework-message {
+                font-size: 1.5rem;
+                padding: 0 20px;
+                text-align: center;
+            }
+
+            .continue-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            /* Level 3: Envelope */
+            .envelope {
+                width: 300px;
+                height: 210px;
+            }
+
+            .envelope-heart {
+                font-size: 3rem;
+            }
+
+            .envelope-text {
+                font-size: 1.4rem;
+                bottom: -50px;
+            }
+
+            /* Level 4: Card */
+            #level4 {
+                padding: 10px;
+                overflow-y: auto;
+            }
+
+            .card-container {
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+                min-height: auto;
+                padding: 20px;
+                margin: 0 auto;
+            }
+
+            .card-border {
+                top: 8px;
+                left: 8px;
+                right: 8px;
+                bottom: 8px;
+                border-width: 2px;
+            }
+
+            .santa-cat {
+                width: 60px;
+                height: 60px;
+                top: 15px;
+                left: 15px;
+            }
+
+            .card-title {
+                font-size: 2rem;
+                margin-top: 25px;
+            }
+
+            .card-year {
+                font-size: 3rem;
+                margin: 5px 0;
+            }
+
+            .bbq-container {
+                transform: scale(0.7);
+                margin: 10px 0;
+            }
+
+            .card-wishes {
+                font-size: 0.9rem;
+                padding: 0 10px;
+                margin: 10px 0;
+            }
+
+            .card-footer {
+                font-size: 1.3rem;
+                padding: 10px 15px;
+            }
+
+            .card-footer span {
+                font-size: 1.2rem;
+            }
+
+            .card-continue {
+                padding: 10px 30px;
+                font-size: 0.9rem;
+                margin: 15px auto;
+            }
+
+            /* Level 5: Bucket List */
+            .bucket-container {
+                padding: 25px 20px;
+                border-radius: 20px;
+            }
+
+            .bucket-title {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .bucket-item {
+                padding: 12px 15px;
+                margin: 8px 0;
+            }
+
+            .bucket-checkbox {
+                width: 25px;
+                height: 25px;
+                margin-right: 15px;
+            }
+
+            .bucket-text {
+                font-size: 0.95rem;
+            }
+
+            .lets-go-btn {
+                padding: 15px 40px;
+                font-size: 1.1rem;
+            }
+
+            /* Level 6: Memory Game */
+            .game-container {
+                padding: 15px;
+                width: 100%;
+            }
+
+            .game-title {
+                font-size: 2rem;
+            }
+
+            .game-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .memory-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                max-width: 280px;
+            }
+
+            .memory-card {
+                font-size: 1.8rem;
+            }
+
+            .game-stats {
+                gap: 20px;
+                font-size: 1rem;
+            }
+
+            .game-btn {
+                padding: 12px 35px;
+                font-size: 1rem;
+            }
+
+            /* Level 7: Balloon Game */
+            .balloon {
+                width: 50px;
+                height: 65px;
+            }
+
+            /* Level 8: Quiz Game */
+            .quiz-container {
+                padding: 25px 20px;
+            }
+
+            .quiz-question {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+
+            .quiz-option {
+                padding: 14px 18px;
+                font-size: 0.95rem;
+            }
+
+            .quiz-result h2 {
+                font-size: 2rem;
+            }
+
+            /* Level 9: Cassette */
+            .cassette-container {
+                padding: 10px;
+            }
+
+            .cassette-title {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .cassette {
+                width: 300px;
+                height: 190px;
+                border-radius: 15px;
+            }
+
+            .cassette-label {
+                width: 240px;
+                height: 70px;
+                top: 15px;
+            }
+
+            .cassette-label-title {
+                font-size: 1rem;
+            }
+
+            .cassette-label-subtitle {
+                font-size: 0.7rem;
+            }
+
+            .cassette-window {
+                width: 220px;
+                height: 45px;
+                top: 95px;
+                gap: 20px;
+            }
+
+            .cassette-reel {
+                width: 32px;
+                height: 32px;
+            }
+
+            .cassette-reel::after {
+                width: 24px;
+                height: 24px;
+            }
+
+            .cassette-tape {
+                width: 60px;
+            }
+
+            .cassette-holes {
+                bottom: 12px;
+                gap: 60px;
+            }
+
+            .cassette-hole {
+                width: 10px;
+                height: 10px;
+            }
+
+            .screw {
+                width: 8px;
+                height: 8px;
+            }
+
+            .play-status {
+                font-size: 1rem;
+            }
+
+            .cassette-controls {
+                gap: 12px;
+            }
+
+            .control-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+
+            .cassette-continue {
+                padding: 12px 35px;
+                font-size: 1rem;
+            }
+
+            /* Level 10: Final Message */
+            .message-container {
+                padding: 0 15px;
+            }
+
+            .message-title {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .target-name {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .message-box {
+                padding: 25px 20px;
+            }
+
+            .message-text {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .final-wishes {
+                gap: 10px;
+            }
+
+            .wish-tag {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+
+            .restart-btn {
+                padding: 12px 35px;
+                font-size: 1rem;
+            }
+
+            /* Creator Page */
+            .creator-container {
+                padding: 25px 20px;
+                margin: 10px;
+                border-radius: 20px;
+            }
+
+            .creator-title {
+                font-size: 1.8rem;
+            }
+
+            .form-group label {
+                font-size: 0.9rem;
+            }
+
+            .form-group input, .form-group textarea {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+
+            .generate-btn {
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            .generated-link {
+                padding: 15px;
+            }
+
+            .qr-section {
+                padding: 20px 15px;
+            }
+
+            .qr-title {
+                font-size: 1.4rem;
+            }
+
+            .qr-frame {
+                padding: 15px;
+            }
+
+            .download-qr-btn {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media screen and (max-width: 380px) {
+            .start-title {
+                font-size: 1.8rem;
+            }
+
+            .start-link {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .envelope {
+                width: 260px;
+                height: 180px;
+            }
+
+            .card {
+                max-width: 300px;
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 1.6rem;
+            }
+
+            .card-year {
+                font-size: 2.5rem;
+            }
+
+            .bucket-title {
+                font-size: 1.6rem;
+            }
+
+            .cassette {
+                width: 260px;
+                height: 170px;
+            }
+
+            .cassette-label {
+                width: 200px;
+                height: 60px;
+            }
+
+            .cassette-window {
+                width: 180px;
+                height: 40px;
+                top: 85px;
+            }
+
+            .target-name {
+                font-size: 2rem;
+            }
+
+            .memory-grid {
+                max-width: 240px;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar">
+        <div class="progress-dot" data-level="1"></div>
+        <div class="progress-dot" data-level="2"></div>
+        <div class="progress-dot" data-level="3"></div>
+        <div class="progress-dot" data-level="4"></div>
+        <div class="progress-dot" data-level="5"></div>
+        <div class="progress-dot" data-level="6"></div>
+        <div class="progress-dot" data-level="7"></div>
+        <div class="progress-dot" data-level="8"></div>
+        <div class="progress-dot" data-level="9"></div>
+        <div class="progress-dot" data-level="10"></div>
+    </div>
+
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Level 1: Start -->
+    <div class="level active" id="level1">
+        <div class="start-container">
+            <h1 class="start-title">Something Special Awaits...</h1>
+            <a href="#" class="start-link" onclick="startExperience()">✨ Click to Begin ✨</a>
+        </div>
+    </div>
+
+    <!-- Level 2: Fireworks -->
+    <div class="level" id="level2">
+        <canvas class="fireworks-canvas" id="fireworksCanvas"></canvas>
+        <!-- City Skyline -->
+        <div class="city-skyline">
+            <div class="building b1"><div class="windows"></div></div>
+            <div class="building b2"><div class="windows"></div></div>
+            <div class="building b3"><div class="windows"></div></div>
+            <div class="building b4"><div class="windows"></div></div>
+            <div class="building b5"><div class="windows"></div></div>
+            <div class="building b6"><div class="windows"></div></div>
+            <div class="building b7"><div class="windows"></div></div>
+            <div class="building b8"><div class="windows"></div></div>
+            <div class="building b9"><div class="windows"></div></div>
+            <div class="building b10"><div class="windows"></div></div>
+            <div class="building b11"><div class="windows"></div></div>
+            <div class="building b12"><div class="windows"></div></div>
+        </div>
+        <div class="cat-meme">
+            <img src="cat.webp" alt="Cat" id="catImage">
+        </div>
+        <div class="firework-message">🎆 See What I Made For You! 🎆</div>
+        <button class="continue-btn" onclick="goToLevel(3)">Continue →</button>
+    </div>
+
+    <!-- Level 3: Envelope -->
+    <div class="level" id="level3">
+        <div class="envelope-container">
+            <div class="envelope" id="envelope" onclick="openEnvelope()">
+                <div class="envelope-back"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-front">
+                    <span class="envelope-heart">💝</span>
+                </div>
+            </div>
+            <p class="envelope-text">Click to Open! 💌</p>
+        </div>
+    </div>
+
+    <!-- Level 4: Card -->
+    <div class="level" id="level4">
+        <div class="card-container" id="cardContainer">
+            <div class="card">
+                <div class="card-border"></div>
+                <div class="santa-cat">
+                    <img src="santa.jpg" alt="Santa Cat">
+                </div>
+                <h1 class="card-title">Happy New Year!</h1>
+                <div class="card-year">2026</div>
+                
+                <div class="bbq-container">
+                    <div class="bbq-grill">
+                        <div class="smoke">
+                            <div class="smoke-puff"></div>
+                            <div class="smoke-puff"></div>
+                            <div class="smoke-puff"></div>
+                        </div>
+                        <div class="grill-lid">
+                            <div class="lid-handle"></div>
+                            <div class="lid-vent"></div>
+                        </div>
+                        <div class="flames">
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="grill-grate">
+                            <div class="grate-bar"></div>
+                            <div class="grate-bar"></div>
+                            <div class="grate-bar"></div>
+                            <div class="grate-bar"></div>
+                        </div>
+                        <div class="food-items">
+                            <span class="food">🍖</span>
+                            <span class="food">🌭</span>
+                            <span class="food">🍗</span>
+                            <span class="food">🥩</span>
+                        </div>
+                        <div class="sizzle-sparks">
+                            <div class="spark"></div>
+                            <div class="spark"></div>
+                            <div class="spark"></div>
+                            <div class="spark"></div>
+                        </div>
+                        <div class="grill-body"></div>
+                        <div class="grill-stand"></div>
+                        <div class="grill-wheels">
+                            <div class="wheel"></div>
+                            <div class="wheel"></div>
+                        </div>
+                        <div class="grill-base"></div>
+                    </div>
+                </div>
+
+                <p class="card-wishes">
+                    May this year bring you endless joy,<br>
+                    delicious moments, and warm memories!<br>
+                    Let's cook up something amazing together! 🔥
+                </p>
+            </div>
+            <button class="card-continue" onclick="goToLevel(5)">Continue to 2026 Goals →</button>
+        </div>
+    </div>
+
+    <!-- Level 5: Bucket List -->
+    <div class="level" id="level5">
+        <div class="bucket-container">
+            <h1 class="bucket-title">🎯 Bucket List 2026 🎯</h1>
+            <ul class="bucket-list" id="bucketList">
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">🌍 Travel to a new place together</span>
+                </li>
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">📚 Learn something new every month</span>
+                </li>
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">🎂 Celebrate every small win</span>
+                </li>
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">💪 Stay healthy and happy</span>
+                </li>
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">🎨 Create beautiful memories</span>
+                </li>
+                <li class="bucket-item" onclick="toggleBucket(this)">
+                    <div class="bucket-checkbox">✓</div>
+                    <span class="bucket-text">❤️ Spread love and kindness</span>
+                </li>
+            </ul>
+            <button class="lets-go-btn" id="letsGoBtn" onclick="goToLevel(6)">🚀 Let's Gooo! 🚀</button>
+        </div>
+    </div>
+
+    <!-- Level 6: Memory Game -->
+    <div class="level" id="level6">
+        <div class="game-container">
+            <h1 class="game-title">🧠 Memory Match Game 🧠</h1>
+            <p class="game-subtitle">Find all the matching pairs!</p>
+            <div class="memory-grid" id="memoryGrid"></div>
+            <div class="game-stats">
+                <span>Moves: <span id="moveCount">0</span></span>
+                <span>Pairs: <span id="pairCount">0</span>/6</span>
+            </div>
+            <button class="game-btn hidden" id="memoryNextBtn" onclick="goToLevel(7)">🎮 Next Game →</button>
+        </div>
+    </div>
+
+    <!-- Level 7: Balloon Pop Game -->
+    <div class="level" id="level7">
+        <div class="game-container balloon-game">
+            <h1 class="game-title">🎈 Pop The Balloons! 🎈</h1>
+            <p class="game-subtitle">Pop 15 balloons to continue!</p>
+            <div class="balloon-area" id="balloonArea"></div>
+            <div class="game-stats">
+                <span>Score: <span id="balloonScore">0</span>/15</span>
+            </div>
+            <button class="game-btn hidden" id="balloonNextBtn" onclick="goToLevel(8)">🎉 Next Level →</button>
+        </div>
+    </div>
+
+    <!-- Level 8: New Year Quiz -->
+    <div class="level" id="level8">
+        <div class="game-container quiz-game">
+            <h1 class="game-title">🎯 New Year Quiz 🎯</h1>
+            <div class="quiz-container" id="quizContainer">
+                <div class="quiz-question" id="quizQuestion"></div>
+                <div class="quiz-options" id="quizOptions"></div>
+                <div class="quiz-progress">Question <span id="quizNum">1</span>/5</div>
+            </div>
+            <div class="quiz-result hidden" id="quizResult">
+                <h2>🎉 Amazing! 🎉</h2>
+                <p>You got <span id="quizScore">0</span>/5 correct!</p>
+            </div>
+            <button class="game-btn hidden" id="quizNextBtn" onclick="goToLevel(9)">Continue →</button>
+        </div>
+    </div>
+
+    <!-- Level 9: Cassette -->
+    <div class="level" id="level9">
+        <div class="cassette-container">
+            <h1 class="cassette-title">🎵 A Special Song For You 🎵</h1>
+            <div class="cassette" id="cassette" onclick="toggleMusic()">
+                <div class="cassette-screws">
+                    <div class="screw tl"></div>
+                    <div class="screw tr"></div>
+                    <div class="screw bl"></div>
+                    <div class="screw br"></div>
+                </div>
+                <div class="cassette-label">
+                    <span class="cassette-label-title">New Year Mix 2026</span>
+                    <span class="cassette-label-subtitle">Made with Love ❤️</span>
+                </div>
+                <div class="cassette-window">
+                    <div class="cassette-reel" id="reel1"></div>
+                    <div class="cassette-tape"></div>
+                    <div class="cassette-reel" id="reel2"></div>
+                </div>
+                <div class="cassette-holes">
+                    <div class="cassette-hole"></div>
+                    <div class="cassette-hole"></div>
+                </div>
+            </div>
+            <p class="play-status" id="playStatus">🎧 Click the cassette to play!</p>
+            <div class="cassette-controls">
+                <button class="control-btn" onclick="event.stopPropagation(); rewindMusic()">⏪</button>
+                <button class="control-btn" onclick="event.stopPropagation(); toggleMusic()" id="playPauseBtn">▶️</button>
+                <button class="control-btn" onclick="event.stopPropagation(); forwardMusic()">⏩</button>
+            </div>
+            <button class="cassette-continue" onclick="goToLevel(10)">Continue to Final Message →</button>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="sia.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Level 10: Final Message -->
+    <div class="level" id="level10">
+        <div class="message-container">
+            <h1 class="message-title">A Special Message For</h1>
+            <h2 class="target-name" id="targetName">My Dear Friend</h2>
+            <div class="message-box">
+                <p class="message-text" id="personalMessage">
+                    As we step into 2026, I want you to know how much you mean to me. 
+                    Every moment with you is a treasure, and I can't wait to create more 
+                    beautiful memories together. Here's to laughter, love, and all the 
+                    adventures that await us! 🌟
+                </p>
+            </div>
+            <div class="final-wishes">
+                <span class="wish-tag">🎉 Joy</span>
+                <span class="wish-tag">💖 Love</span>
+                <span class="wish-tag">✨ Success</span>
+                <span class="wish-tag">🌈 Happiness</span>
+            </div>
+            <button class="restart-btn" onclick="restart()">🔄 Experience Again</button>
+        </div>
+    </div>
+
+    <!-- Creator Mode (when no params) -->
+    <div class="level" id="creator">
+        <div class="creator-container">
+            <h1 class="creator-title">🎁 Create Your Special Link 🎁</h1>
+            <form class="creator-form" onsubmit="generateLink(event)">
+                <div class="form-group">
+                    <label>Recipient's Name 💝</label>
+                    <input type="text" id="recipientName" placeholder="Enter their name..." required>
+                </div>
+                <div class="form-group">
+                    <label>Your Personal Message 💌</label>
+                    <textarea id="customMessage" placeholder="Write something special..."></textarea>
+                </div>
+                <button type="submit" class="generate-btn">✨ Generate Magic Link ✨</button>
+            </form>
+            <div class="generated-link" id="generatedLink">
+                <p>🎉 Share this link with your loved one:</p>
+                <input type="text" id="linkOutput" readonly>
+                <button class="copy-btn" onclick="copyLink()">📋 Copy Link</button>
+                
+                <div class="qr-section">
+                    <h3 class="qr-title">✨ Or Scan QR Code ✨</h3>
+                    <div class="qr-container">
+                        <div class="qr-frame">
+                            <div id="qrCode"></div>
+                            <span class="qr-decorations">🎆 Happy 2026! 🎆</span>
+                        </div>
+                        <p class="qr-label">New Year Special Gift 🎁</p>
+                        <button class="download-qr-btn" onclick="downloadQR()">📥 Download QR Code PNG</button>
+                        <p class="qr-note">Share this beautiful QR with your loved ones!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetName = urlParams.get('name');
+        const customMessage = urlParams.get('message');
+
+        let currentLevel = 1;
+        let isPlaying = false;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            
+            if (targetName) {
+                // Show the experience
+                document.getElementById('targetName').textContent = decodeURIComponent(targetName);
+                if (customMessage) {
+                    document.getElementById('personalMessage').textContent = decodeURIComponent(customMessage);
+                }
+                document.getElementById('creator').style.display = 'none';
+                updateProgress(1);
+            } else {
+                // Show creator mode
+                document.querySelectorAll('.level').forEach(l => l.classList.remove('active'));
+                document.getElementById('creator').classList.add('active');
+                document.getElementById('progressBar').style.display = 'none';
+            }
+        });
+
+        // Create stars background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Update progress bar
+        function updateProgress(level) {
+            document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+                dot.classList.remove('active', 'completed');
+                if (index + 1 < level) {
+                    dot.classList.add('completed');
+                } else if (index + 1 === level) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        // Start experience
+        function startExperience() {
+            goToLevel(2);
+            startFireworks();
+        }
+
+        // Go to specific level
+        function goToLevel(level) {
+            document.querySelectorAll('.level').forEach(l => l.classList.remove('active'));
+            document.getElementById('level' + level).classList.add('active');
+            currentLevel = level;
+            updateProgress(level);
+            
+            if (level === 2) {
+                startFireworks();
+                animateCat();
+            } else if (level === 6) {
+                initMemoryGame();
+            } else if (level === 7) {
+                initBalloonGame();
+            } else if (level === 8) {
+                initQuizGame();
+            }
+        }
+
+        // EPIC FIREWORKS with city
+        function startFireworks() {
+            const canvas = document.getElementById('fireworksCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const fireworks = [];
+            const particles = [];
+            const trails = [];
+
+            class Firework {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = canvas.height;
+                    this.targetY = 100 + Math.random() * (canvas.height * 0.4);
+                    this.speed = 10 + Math.random() * 5;
+                    this.exploded = false;
+                    this.hue = Math.random() * 360;
+                    this.trail = [];
+                }
+
+                update() {
+                    if (!this.exploded) {
+                        this.trail.push({ x: this.x, y: this.y, alpha: 1 });
+                        if (this.trail.length > 10) this.trail.shift();
+                        
+                        this.y -= this.speed;
+                        this.x += Math.sin(this.y * 0.02) * 0.5;
+                        
+                        if (this.y <= this.targetY) {
+                            this.explode();
+                        }
+                    }
+                }
+
+                explode() {
+                    this.exploded = true;
+                    const patterns = ['circle', 'star', 'heart', 'double'];
+                    const pattern = patterns[Math.floor(Math.random() * patterns.length)];
+                    
+                    if (pattern === 'circle') {
+                        for (let i = 0; i < 120; i++) {
+                            particles.push(new Particle(this.x, this.y, this.hue, 'circle'));
+                        }
+                    } else if (pattern === 'star') {
+                        for (let i = 0; i < 5; i++) {
+                            const angle = (i / 5) * Math.PI * 2 - Math.PI / 2;
+                            for (let j = 0; j < 20; j++) {
+                                particles.push(new Particle(this.x, this.y, this.hue, 'line', angle));
+                            }
+                        }
+                    } else if (pattern === 'heart') {
+                        for (let i = 0; i < 100; i++) {
+                            particles.push(new Particle(this.x, this.y, this.hue, 'heart'));
+                        }
+                    } else if (pattern === 'double') {
+                        for (let i = 0; i < 80; i++) {
+                            particles.push(new Particle(this.x, this.y, this.hue, 'circle'));
+                        }
+                        setTimeout(() => {
+                            for (let i = 0; i < 60; i++) {
+                                particles.push(new Particle(this.x, this.y - 30, (this.hue + 60) % 360, 'circle'));
+                            }
+                        }, 200);
+                    }
+                }
+
+                draw() {
+                    // Draw trail
+                    this.trail.forEach((point, i) => {
+                        ctx.beginPath();
+                        ctx.arc(point.x, point.y, 3 - i * 0.2, 0, Math.PI * 2);
+                        ctx.fillStyle = `hsla(${this.hue}, 100%, 70%, ${point.alpha})`;
+                        ctx.fill();
+                        point.alpha -= 0.1;
+                    });
+                    
+                    if (!this.exploded) {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
+                        ctx.fillStyle = `hsl(${this.hue}, 100%, 70%)`;
+                        ctx.shadowBlur = 20;
+                        ctx.shadowColor = `hsl(${this.hue}, 100%, 50%)`;
+                        ctx.fill();
+                        ctx.shadowBlur = 0;
+                    }
+                }
+            }
+
+            class Particle {
+                constructor(x, y, hue, pattern, angle = null) {
+                    this.x = x;
+                    this.y = y;
+                    this.hue = hue + Math.random() * 30 - 15;
+                    
+                    if (pattern === 'line' && angle !== null) {
+                        this.angle = angle + (Math.random() - 0.5) * 0.3;
+                        this.speed = Math.random() * 4 + 4;
+                    } else if (pattern === 'heart') {
+                        const t = Math.random() * Math.PI * 2;
+                        this.angle = Math.atan2(
+                            13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t),
+                            16 * Math.pow(Math.sin(t), 3)
+                        );
+                        this.speed = Math.random() * 5 + 3;
+                    } else {
+                        this.angle = Math.random() * Math.PI * 2;
+                        this.speed = Math.random() * 8 + 2;
+                    }
+                    
+                    this.friction = 0.95;
+                    this.gravity = 0.15;
+                    this.alpha = 1;
+                    this.decay = Math.random() * 0.015 + 0.008;
+                    this.size = Math.random() * 3 + 2;
+                    this.sparkle = Math.random() > 0.5;
+                }
+
+                update() {
+                    this.speed *= this.friction;
+                    this.x += Math.cos(this.angle) * this.speed;
+                    this.y += Math.sin(this.angle) * this.speed + this.gravity;
+                    this.alpha -= this.decay;
+                    if (this.sparkle && Math.random() > 0.9) {
+                        this.alpha += 0.02;
+                    }
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.alpha;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsl(${this.hue}, 100%, ${60 + Math.random() * 20}%)`;
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = `hsl(${this.hue}, 100%, 50%)`;
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            let lastFirework = 0;
+            let fireworkInterval = 400;
+            
+            function animate() {
+                if (currentLevel !== 2) return;
+                
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                const now = Date.now();
+                if (now - lastFirework > fireworkInterval) {
+                    fireworks.push(new Firework());
+                    if (Math.random() > 0.6) fireworks.push(new Firework());
+                    lastFirework = now;
+                    fireworkInterval = 300 + Math.random() * 400;
+                }
+
+                fireworks.forEach((fw, i) => {
+                    fw.update();
+                    fw.draw();
+                    if (fw.exploded) fireworks.splice(i, 1);
+                });
+
+                particles.forEach((p, i) => {
+                    p.update();
+                    p.draw();
+                    if (p.alpha <= 0) particles.splice(i, 1);
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        // Cat animation
+        function animateCat() {
+            const cat = document.getElementById('catImage');
+            let mouthOpen = false;
+            
+            setInterval(() => {
+                if (currentLevel === 2) {
+                    mouthOpen = !mouthOpen;
+                    cat.style.transform = mouthOpen ? 'scaleY(1.15)' : 'scaleY(1)';
+                }
+            }, 200);
+        }
+
+        // Open envelope
+        function openEnvelope() {
+            const envelope = document.getElementById('envelope');
+            envelope.classList.add('open');
+            
+            setTimeout(() => {
+                goToLevel(4);
+                document.getElementById('cardContainer').classList.add('show');
+                createConfetti();
+            }, 1000);
+        }
+
+        // Bucket list
+        function toggleBucket(item) {
+            item.classList.toggle('checked');
+            checkAllBuckets();
+        }
+
+        function checkAllBuckets() {
+            const items = document.querySelectorAll('.bucket-item');
+            const checkedItems = document.querySelectorAll('.bucket-item.checked');
+            const btn = document.getElementById('letsGoBtn');
+            
+            if (items.length === checkedItems.length) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        }
+
+        // ==================== MEMORY GAME ====================
+        const memoryEmojis = ['🎉', '🎊', '🎁', '🌟', '❤️', '🔥'];
+        let memoryCards = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moveCount = 0;
+        let canFlip = true;
+
+        function initMemoryGame() {
+            const grid = document.getElementById('memoryGrid');
+            grid.innerHTML = '';
+            memoryCards = [...memoryEmojis, ...memoryEmojis].sort(() => Math.random() - 0.5);
+            flippedCards = [];
+            matchedPairs = 0;
+            moveCount = 0;
+            canFlip = true;
+            document.getElementById('moveCount').textContent = '0';
+            document.getElementById('pairCount').textContent = '0';
+            document.getElementById('memoryNextBtn').classList.add('hidden');
+
+            memoryCards.forEach((emoji, index) => {
+                const card = document.createElement('div');
+                card.className = 'memory-card';
+                card.dataset.emoji = emoji;
+                card.dataset.index = index;
+                card.innerHTML = '<span class="card-back">❓</span>';
+                card.onclick = () => flipCard(card);
+                grid.appendChild(card);
+            });
+        }
+
+        function flipCard(card) {
+            if (!canFlip || card.classList.contains('flipped') || card.classList.contains('matched')) return;
+            
+            card.classList.add('flipped');
+            card.innerHTML = card.dataset.emoji;
+            flippedCards.push(card);
+
+            if (flippedCards.length === 2) {
+                moveCount++;
+                document.getElementById('moveCount').textContent = moveCount;
+                canFlip = false;
+
+                if (flippedCards[0].dataset.emoji === flippedCards[1].dataset.emoji) {
+                    flippedCards.forEach(c => c.classList.add('matched'));
+                    matchedPairs++;
+                    document.getElementById('pairCount').textContent = matchedPairs;
+                    flippedCards = [];
+                    canFlip = true;
+
+                    if (matchedPairs === 6) {
+                        setTimeout(() => {
+                            document.getElementById('memoryNextBtn').classList.remove('hidden');
+                            createConfetti();
+                        }, 500);
+                    }
+                } else {
+                    setTimeout(() => {
+                        flippedCards.forEach(c => {
+                            c.classList.remove('flipped');
+                            c.innerHTML = '<span class="card-back">❓</span>';
+                        });
+                        flippedCards = [];
+                        canFlip = true;
+                    }, 1000);
+                }
+            }
+        }
+
+        // ==================== BALLOON GAME ====================
+        let balloonScore = 0;
+        let balloonInterval;
+
+        function initBalloonGame() {
+            balloonScore = 0;
+            document.getElementById('balloonScore').textContent = '0';
+            document.getElementById('balloonNextBtn').classList.add('hidden');
+            
+            const colors = ['#ff6b6b', '#ffd700', '#4ecdc4', '#a55eea', '#26de81', '#fd79a8', '#ff9f43'];
+            const area = document.getElementById('balloonArea');
+            area.innerHTML = '';
+
+            function createBalloon() {
+                if (currentLevel !== 7 || balloonScore >= 15) return;
+
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+                balloon.style.background = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.animationDuration = (4 + Math.random() * 3) + 's';
+                
+                balloon.onclick = () => popBalloon(balloon);
+                area.appendChild(balloon);
+
+                balloon.addEventListener('animationend', () => balloon.remove());
+            }
+
+            balloonInterval = setInterval(createBalloon, 600);
+        }
+
+        function popBalloon(balloon) {
+            if (balloon.classList.contains('popped')) return;
+            
+            balloon.classList.add('popped');
+            balloonScore++;
+            document.getElementById('balloonScore').textContent = balloonScore;
+
+            // Create pop particles
+            for (let i = 0; i < 8; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    left: ${balloon.offsetLeft + 35}px;
+                    top: ${balloon.offsetTop + 45}px;
+                    width: 10px;
+                    height: 10px;
+                    background: ${balloon.style.background};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 100;
+                `;
+                document.getElementById('balloonArea').appendChild(particle);
+                
+                const angle = (i / 8) * Math.PI * 2;
+                const velocity = 5 + Math.random() * 5;
+                let x = 0, y = 0, opacity = 1;
+                
+                const animateParticle = () => {
+                    x += Math.cos(angle) * velocity;
+                    y += Math.sin(angle) * velocity + 2;
+                    opacity -= 0.05;
+                    particle.style.transform = `translate(${x}px, ${y}px)`;
+                    particle.style.opacity = opacity;
+                    if (opacity > 0) requestAnimationFrame(animateParticle);
+                    else particle.remove();
+                };
+                animateParticle();
+            }
+
+            if (balloonScore >= 15) {
+                clearInterval(balloonInterval);
+                setTimeout(() => {
+                    document.getElementById('balloonNextBtn').classList.remove('hidden');
+                    createConfetti();
+                }, 500);
+            }
+        }
+
+        // ==================== QUIZ GAME ====================
+        const quizQuestions = [
+            {
+                question: "What's the most important thing in the new year?",
+                options: ["Money 💰", "Happiness & Love ❤️", "Fame 🌟", "Work 💼"],
+                correct: 1
+            },
+            {
+                question: "What should we leave behind in 2025?",
+                options: ["Good memories", "Negativity & Bad vibes 👋", "Friends", "Dreams"],
+                correct: 1
+            },
+            {
+                question: "Best New Year resolution?",
+                options: ["Be more kind & spread love 💖", "Sleep more", "Eat more junk food", "Watch more TV"],
+                correct: 0
+            },
+            {
+                question: "What makes celebrations special?",
+                options: ["Expensive gifts", "Being alone", "Loved ones & good company 👨‍👩‍👧‍👦", "Working overtime"],
+                correct: 2
+            },
+            {
+                question: "What's the best way to start 2026?",
+                options: ["With complaints", "With gratitude & positivity ✨", "Sleeping all day", "Being angry"],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let quizScore = 0;
+
+        function initQuizGame() {
+            currentQuestion = 0;
+            quizScore = 0;
+            document.getElementById('quizContainer').classList.remove('hidden');
+            document.getElementById('quizResult').classList.add('hidden');
+            document.getElementById('quizNextBtn').classList.add('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = quizQuestions[currentQuestion];
+            document.getElementById('quizQuestion').textContent = q.question;
+            document.getElementById('quizNum').textContent = currentQuestion + 1;
+            
+            const optionsDiv = document.getElementById('quizOptions');
+            optionsDiv.innerHTML = '';
+            
+            q.options.forEach((opt, i) => {
+                const btn = document.createElement('div');
+                btn.className = 'quiz-option';
+                btn.textContent = opt;
+                btn.onclick = () => selectAnswer(i);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(index) {
+            const options = document.querySelectorAll('.quiz-option');
+            const correct = quizQuestions[currentQuestion].correct;
+            
+            options.forEach((opt, i) => {
+                opt.style.pointerEvents = 'none';
+                if (i === correct) opt.classList.add('correct');
+                else if (i === index && i !== correct) opt.classList.add('wrong');
+            });
+
+            if (index === correct) quizScore++;
+
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    showQuestion();
+                } else {
+                    showQuizResult();
+                }
+            }, 1500);
+        }
+
+        function showQuizResult() {
+            document.getElementById('quizContainer').classList.add('hidden');
+            document.getElementById('quizResult').classList.remove('hidden');
+            document.getElementById('quizScore').textContent = quizScore;
+            document.getElementById('quizNextBtn').classList.remove('hidden');
+            if (quizScore >= 3) createConfetti();
+        }
+
+        // Music
+        function toggleMusic() {
+            const audio = document.getElementById('bgMusic');
+            const reel1 = document.getElementById('reel1');
+            const reel2 = document.getElementById('reel2');
+            const status = document.getElementById('playStatus');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+
+            if (isPlaying) {
+                audio.pause();
+                reel1.classList.remove('spinning');
+                reel2.classList.remove('spinning');
+                status.textContent = '🎧 Click the cassette to play!';
+                if (playPauseBtn) playPauseBtn.textContent = '▶️';
+            } else {
+                audio.play();
+                reel1.classList.add('spinning');
+                reel2.classList.add('spinning');
+                status.textContent = '🎶 Now Playing... Click to pause';
+                if (playPauseBtn) playPauseBtn.textContent = '⏸️';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function rewindMusic() {
+            const audio = document.getElementById('bgMusic');
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        }
+
+        function forwardMusic() {
+            const audio = document.getElementById('bgMusic');
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        }
+
+        // Confetti
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#ffd700', '#4ecdc4', '#a55eea', '#26de81', '#fd79a8'];
+            
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    document.body.appendChild(confetti);
+
+                    const animation = confetti.animate([
+                        { top: '-10px', opacity: 1 },
+                        { top: '100vh', opacity: 0 }
+                    ], {
+                        duration: 3000 + Math.random() * 2000,
+                        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    });
+
+                    animation.onfinish = () => confetti.remove();
+                }, i * 30);
+            }
+        }
+
+        // Restart
+        function restart() {
+            currentLevel = 1;
+            document.querySelectorAll('.level').forEach(l => l.classList.remove('active'));
+            document.getElementById('level1').classList.add('active');
+            document.querySelectorAll('.bucket-item').forEach(item => item.classList.remove('checked'));
+            document.getElementById('letsGoBtn').classList.remove('active');
+            document.getElementById('envelope').classList.remove('open');
+            document.getElementById('cardContainer').classList.remove('show');
+            updateProgress(1);
+            
+            const audio = document.getElementById('bgMusic');
+            audio.pause();
+            audio.currentTime = 0;
+            isPlaying = false;
+            
+            clearInterval(balloonInterval);
+        }
+
+        // Generate link
+        function generateLink(e) {
+            e.preventDefault();
+            const name = document.getElementById('recipientName').value;
+            const message = document.getElementById('customMessage').value;
+            
+            const baseUrl = window.location.href.split('?')[0];
+            let link = `${baseUrl}?name=${encodeURIComponent(name)}`;
+            if (message) {
+                link += `&message=${encodeURIComponent(message)}`;
+            }
+            
+            document.getElementById('linkOutput').value = link;
+            document.getElementById('generatedLink').classList.add('show');
+            
+            // Generate QR Code
+            generateQRCode(link);
+        }
+
+        // QR Code Generation
+        function generateQRCode(url) {
+            const qrContainer = document.getElementById('qrCode');
+            qrContainer.innerHTML = '';
+            
+            // Create canvas for QR
+            const canvas = document.createElement('canvas');
+            const size = 200;
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Use a simple QR code library inline
+            // Since we can't load external libraries, we'll create a styled placeholder
+            // that generates a real QR using the QRCode API
+            
+            const qrScript = document.createElement('script');
+            qrScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+            qrScript.onload = function() {
+                qrContainer.innerHTML = '';
+                new QRCode(qrContainer, {
+                    text: url,
+                    width: 180,
+                    height: 180,
+                    colorDark: '#1a1a2e',
+                    colorLight: '#ffffff',
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+                
+                // Style the QR after generation
+                setTimeout(() => {
+                    const qrImg = qrContainer.querySelector('img');
+                    const qrCanvas = qrContainer.querySelector('canvas');
+                    if (qrImg) {
+                        qrImg.style.borderRadius = '10px';
+                        qrImg.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+                    }
+                    if (qrCanvas) {
+                        qrCanvas.style.borderRadius = '10px';
+                    }
+                }, 100);
+            };
+            
+            // Check if script already loaded
+            if (typeof QRCode !== 'undefined') {
+                qrContainer.innerHTML = '';
+                new QRCode(qrContainer, {
+                    text: url,
+                    width: 180,
+                    height: 180,
+                    colorDark: '#1a1a2e',
+                    colorLight: '#ffffff',
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            } else {
+                document.head.appendChild(qrScript);
+            }
+        }
+
+        // Download QR Code
+        function downloadQR() {
+            const qrContainer = document.getElementById('qrCode');
+            const qrCanvas = qrContainer.querySelector('canvas');
+            const qrImg = qrContainer.querySelector('img');
+            
+            // Create a new canvas with decorations
+            const downloadCanvas = document.createElement('canvas');
+            const ctx = downloadCanvas.getContext('2d');
+            const padding = 40;
+            const size = 280;
+            
+            downloadCanvas.width = size;
+            downloadCanvas.height = size + 60;
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, size, size + 60);
+            gradient.addColorStop(0, '#ffd700');
+            gradient.addColorStop(0.5, '#ff6b6b');
+            gradient.addColorStop(1, '#ffd700');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size + 60);
+            
+            // White rounded rectangle for QR
+            ctx.fillStyle = '#ffffff';
+            roundRect(ctx, 20, 20, size - 40, size - 40, 15);
+            ctx.fill();
+            
+            // Draw QR code
+            const sourceCanvas = qrCanvas || createCanvasFromImg(qrImg);
+            if (sourceCanvas) {
+                ctx.drawImage(sourceCanvas, 40, 40, 200, 200);
+            }
+            
+            // Add text at bottom
+            ctx.fillStyle = '#1a1a2e';
+            ctx.font = 'bold 16px Poppins, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('🎉 Happy New Year 2026! 🎉', size / 2, size + 35);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = 'NewYear2026_QR.png';
+            link.href = downloadCanvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function createCanvasFromImg(img) {
+            if (!img) return null;
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width || 180;
+            canvas.height = img.height || 180;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            return canvas;
+        }
+
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+
+        // Copy link
+        function copyLink() {
+            const input = document.getElementById('linkOutput');
+            input.select();
+            document.execCommand('copy');
+            
+            const btn = document.querySelector('.copy-btn');
+            btn.textContent = '✅ Copied!';
+            setTimeout(() => {
+                btn.textContent = '📋 Copy Link';
+            }, 2000);
+        }
+
+        // Window resize
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('fireworksCanvas');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+    </script>
+</body>
+</html>
